@@ -9,5 +9,9 @@ app.get('/home', (req, res) => {
 })
 
 server.listen('3001', (req, res)=>{
-    console.log('server listening...')
+    console.log('Server listening...')
+})
+
+.on("connection" , (socket) => {
+    console.log("User connected: " + socket.id)
 })
